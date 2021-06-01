@@ -31,14 +31,14 @@ function randomNumber(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min)
 }
+// let tableHeader = document.createElement('tr');
+// myTable.appendChild(tableHeader);
 
 function render() {
-    let tableBody = document.createElement('tbody');
-    myTable.appendChild(tableBody);
+
 
     for (let index = 0; index < mainArr.length; index++) {
         tableBody.textContent = '';
-
 
         let tBody = document.createElement('tr');
         tableBody.appendChild(tBody);

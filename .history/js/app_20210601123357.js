@@ -37,8 +37,8 @@ function render() {
     myTable.appendChild(tableBody);
 
     for (let index = 0; index < mainArr.length; index++) {
+        
         tableBody.textContent = '';
-
 
         let tBody = document.createElement('tr');
         tableBody.appendChild(tBody);
@@ -62,7 +62,6 @@ function render() {
         let pEl3 = document.createElement('p');
         td2.appendChild(pEl3);
         pEl3.textContent = `Food Price:${randomNumber(1, 100)}`;
-
     }
 
 }

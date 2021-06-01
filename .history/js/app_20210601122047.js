@@ -5,43 +5,40 @@ let myTable = document.getElementById('myTable');
 
 
 let mainArr = [];
-function Foods(userName, foodType) {
-    this.userName = userName;
-    this.foodType = foodType;
-    this.img = `images/${foodType}.jpg`
+function Foods(userName,foodType){
+    this.userName=userName;
+    this.foodType=foodType;
+    this.img=`images/${foodType}.jpg`
     mainArr.push(this);
 }
 console.log(mainArr);
 
-myForm.addEventListener('submit', handleEvent);
-function handleEvent(event) {
+myForm.addEventListener('submit',handleEvent);
+function handleEvent(event){
     event.preventDefault();
 
     let userName = event.target.name.value;
     let foodType = event.target.food.value;
     console.log(foodType);
-    new Foods(userName, foodType);
+    new Foods(userName,foodType);
     setting();
     render();
 
 }
 
-function randomNumber(min, max) {
+function randomNumber(min,max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min)
 }
 
-function render() {
-    let tableBody = document.createElement('tbody');
-    myTable.appendChild(tableBody);
-
+function render(){
+    
     for (let index = 0; index < mainArr.length; index++) {
-        tableBody.textContent = '';
-
-
         let tBody = document.createElement('tr');
-        tableBody.appendChild(tBody);
+        myTable.appendChild(tBody);
+
+        myTable.textContent='';
 
         let td1 = document.createElement('td');
         tBody.appendChild(td1);
@@ -55,29 +52,28 @@ function render() {
 
         let pEl1 = document.createElement('p');
         td2.appendChild(pEl1);
-        pEl1.textContent = `Customer Name:${mainArr[index].userName}`;
+        pEl1.textContent=`Customer Name:${mainArr[index].userName}`;
         let pEl2 = document.createElement('p');
         td2.appendChild(pEl2);
-        pEl2.textContent = `Food Type:${mainArr[index].foodType}`;
+        pEl2.textContent=`Food Type:${mainArr[index].foodType}`;
         let pEl3 = document.createElement('p');
         td2.appendChild(pEl3);
-        pEl3.textContent = `Food Price:${randomNumber(1, 100)}`;
-
+        pEl3.textContent=`Food Price:${randomNumber(1,100)}`;
     }
 
 }
 
-function setting() {
+function setting(){
     let data = JSON.stringify(mainArr);
-    localStorage.setItem('information', data);
+    localStorage.setItem('information',data);
 }
 
-function getting() {
+function getting(){
     let stringObj = localStorage.getItem('information');
     let normalObj = JSON.parse(stringObj);
     console.log(stringObj);
     console.log(normalObj);
-    if (normalObj !== null) {
+    if(normalObj !== null){
         mainArr = normalObj;
     }
     console.log(mainArr);

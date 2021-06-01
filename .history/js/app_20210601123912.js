@@ -37,32 +37,32 @@ function render() {
     myTable.appendChild(tableBody);
 
     for (let index = 0; index < mainArr.length; index++) {
-        tableBody.textContent = '';
-
-
+        
         let tBody = document.createElement('tr');
         tableBody.appendChild(tBody);
-
-        let td1 = document.createElement('td');
-        tBody.appendChild(td1);
-
-        let imgEl = document.createElement('img');
-        td1.appendChild(imgEl);
-        imgEl.setAttribute('src', mainArr[index].img);
-
-        let td2 = document.createElement('td');
-        tBody.appendChild(td2);
-
-        let pEl1 = document.createElement('p');
-        td2.appendChild(pEl1);
-        pEl1.textContent = `Customer Name:${mainArr[index].userName}`;
-        let pEl2 = document.createElement('p');
-        td2.appendChild(pEl2);
-        pEl2.textContent = `Food Type:${mainArr[index].foodType}`;
-        let pEl3 = document.createElement('p');
-        td2.appendChild(pEl3);
-        pEl3.textContent = `Food Price:${randomNumber(1, 100)}`;
-
+        
+        for (let index = 0; index < mainArr.length; index++) {
+            tableBody.textContent = '';
+            let td1 = document.createElement('td');
+            tBody.appendChild(td1);
+    
+            let imgEl = document.createElement('img');
+            td1.appendChild(imgEl);
+            imgEl.setAttribute('src', mainArr[index].img);
+    
+            let td2 = document.createElement('td');
+            tBody.appendChild(td2);
+    
+            let pEl1 = document.createElement('p');
+            td2.appendChild(pEl1);
+            pEl1.textContent = `Customer Name:${mainArr[index].userName}`;
+            let pEl2 = document.createElement('p');
+            td2.appendChild(pEl2);
+            pEl2.textContent = `Food Type:${mainArr[index].foodType}`;
+            let pEl3 = document.createElement('p');
+            td2.appendChild(pEl3);
+            pEl3.textContent = `Food Price:${randomNumber(1, 100)}`;    
+        }
     }
 
 }

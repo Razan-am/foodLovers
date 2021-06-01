@@ -31,17 +31,26 @@ function randomNumber(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min)
 }
+let tHeader = document.createElement('tr');
+myTable.appendChild(tHeader);
 
 function render() {
     let tableBody = document.createElement('tbody');
     myTable.appendChild(tableBody);
-
     for (let index = 0; index < mainArr.length; index++) {
-        tableBody.textContent = '';
+        tHeader.textContent = '';
+        let th1 = document.createElement('th');
+        tHeader.appendChild(th1);
+        th1.textContent = `Order Images`;
 
+        let th2 = document.createElement('th');
+        tHeader.appendChild(th2);
+        th2.textContent = `Order Details`;
 
         let tBody = document.createElement('tr');
         tableBody.appendChild(tBody);
+
+        tBody.textContent = '';
 
         let td1 = document.createElement('td');
         tBody.appendChild(td1);
@@ -62,7 +71,6 @@ function render() {
         let pEl3 = document.createElement('p');
         td2.appendChild(pEl3);
         pEl3.textContent = `Food Price:${randomNumber(1, 100)}`;
-
     }
 
 }

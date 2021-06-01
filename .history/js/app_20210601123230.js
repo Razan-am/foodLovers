@@ -36,12 +36,12 @@ function render() {
     let tableBody = document.createElement('tbody');
     myTable.appendChild(tableBody);
 
+    tableBody.textContent = '';
     for (let index = 0; index < mainArr.length; index++) {
-        tableBody.textContent = '';
-
 
         let tBody = document.createElement('tr');
         tableBody.appendChild(tBody);
+
 
         let td1 = document.createElement('td');
         tBody.appendChild(td1);
@@ -62,7 +62,6 @@ function render() {
         let pEl3 = document.createElement('p');
         td2.appendChild(pEl3);
         pEl3.textContent = `Food Price:${randomNumber(1, 100)}`;
-
     }
 
 }
