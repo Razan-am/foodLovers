@@ -73,16 +73,16 @@ table{
     position: relative;
     margin-left: 700px;
     width: 500px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     
 }
 table th{
-
     margin-top: 20px;
     margin-left: 30px;
     border: 1px solid red;
     font-size: 20px;
     text-align: center;
+    width: 400px;
 
 }
 table td{
@@ -90,6 +90,7 @@ table td{
     border: 1px solid red;
     padding-bottom: 80px;
     background-color: thistle;
+
 }
 table img{
     width: 90px;

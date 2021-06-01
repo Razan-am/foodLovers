@@ -83,13 +83,14 @@ table th{
     border: 1px solid red;
     font-size: 20px;
     text-align: center;
-
+    border-radius: 40px;
 }
 table td{
     
     border: 1px solid red;
     padding-bottom: 80px;
     background-color: thistle;
+
 }
 table img{
     width: 90px;

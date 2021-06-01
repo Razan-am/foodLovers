@@ -72,12 +72,11 @@ table{
     top: -300px;
     position: relative;
     margin-left: 700px;
-    width: 500px;
-    /* border-radius: 10px; */
+    width:600px;
+    border-radius: 10px;
     
 }
 table th{
-
     margin-top: 20px;
     margin-left: 30px;
     border: 1px solid red;
@@ -90,6 +89,7 @@ table td{
     border: 1px solid red;
     padding-bottom: 80px;
     background-color: thistle;
+
 }
 table img{
     width: 90px;

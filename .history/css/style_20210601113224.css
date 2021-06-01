@@ -21,7 +21,7 @@ header img{
     width: 120px;
     height: 100px;
 }
-#main{
+main img{
     top: 50px;
     position: absolute;
     z-index: -1;
@@ -73,11 +73,10 @@ table{
     position: relative;
     margin-left: 700px;
     width: 500px;
-    /* border-radius: 10px; */
+    border-radius: 10px;
     
 }
 table th{
-
     margin-top: 20px;
     margin-left: 30px;
     border: 1px solid red;
@@ -89,24 +88,23 @@ table td{
     
     border: 1px solid red;
     padding-bottom: 80px;
-    background-color: thistle;
 }
 table img{
     width: 90px;
     height: 90px;
     z-index: 1;
-    margin-top: 30px;
     margin-left: 30px;
 
 }
 table p{
     color: black;
     font-family: 'Fredoka One', cursive;
-    margin-top:20px;
+    margin-top: 30px;
     margin-left: 20px;
 }
 footer{
     background-color: rgba(255, 229, 72, 255);
+    margin-top: 250px;
     height: 50px;
 }
 footer p{
