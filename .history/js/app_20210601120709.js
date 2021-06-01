@@ -22,7 +22,7 @@ function handleEvent(event){
     console.log(foodType);
     new Foods(userName,foodType);
     setting();
-    render();
+    // render();
 
 }
 

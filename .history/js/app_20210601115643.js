@@ -23,7 +23,6 @@ function handleEvent(event){
     new Foods(userName,foodType);
     setting();
     render();
-
 }
 
 function randomNumber(min,max){
@@ -37,7 +36,7 @@ function render(){
     myTable.appendChild(tBody);
     
     for (let index = 0; index < mainArr.length; index++) {
-        tBody.textContent='';
+        // tBody.textContent='';
 
         let td1 = document.createElement('td');
         tBody.appendChild(td1);
@@ -59,7 +58,6 @@ function render(){
         td2.appendChild(pEl3);
         pEl3.textContent=`Food Price:${randomNumber(1,100)}`;
     }
-
 }
 
 function setting(){

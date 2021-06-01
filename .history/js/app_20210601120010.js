@@ -23,7 +23,7 @@ function handleEvent(event){
     new Foods(userName,foodType);
     setting();
     render();
-
+    myForm.removeEventListener();
 }
 
 function randomNumber(min,max){

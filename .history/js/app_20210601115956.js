@@ -23,7 +23,6 @@ function handleEvent(event){
     new Foods(userName,foodType);
     setting();
     render();
-
 }
 
 function randomNumber(min,max){
@@ -59,7 +58,7 @@ function render(){
         td2.appendChild(pEl3);
         pEl3.textContent=`Food Price:${randomNumber(1,100)}`;
     }
-
+    myForm.removeEventListener();
 }
 
 function setting(){

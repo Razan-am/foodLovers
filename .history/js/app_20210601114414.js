@@ -23,7 +23,6 @@ function handleEvent(event){
     new Foods(userName,foodType);
     setting();
     render();
-
 }
 
 function randomNumber(min,max){
@@ -37,7 +36,7 @@ function render(){
     myTable.appendChild(tBody);
     
     for (let index = 0; index < mainArr.length; index++) {
-        tBody.textContent='';
+        // tBody.textContent='';
 
         let td1 = document.createElement('td');
         tBody.appendChild(td1);
@@ -58,8 +57,9 @@ function render(){
         let pEl3 = document.createElement('p');
         td2.appendChild(pEl3);
         pEl3.textContent=`Food Price:${randomNumber(1,100)}`;
+        
+        
     }
-
 }
 
 function setting(){
@@ -70,12 +70,10 @@ function setting(){
 function getting(){
     let stringObj = localStorage.getItem('information');
     let normalObj = JSON.parse(stringObj);
-    console.log(stringObj);
-    console.log(normalObj);
+
     if(normalObj !== null){
         mainArr = normalObj;
     }
-    console.log(mainArr);
     render();
 }
 getting();

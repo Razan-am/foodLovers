@@ -76,6 +76,7 @@ function getting(){
         mainArr = normalObj;
     }
     console.log(mainArr);
+    mainArr.push(normalObj)
     render();
 }
 getting();
